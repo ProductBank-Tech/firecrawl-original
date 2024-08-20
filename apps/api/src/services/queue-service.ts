@@ -4,7 +4,7 @@ import IORedis from "ioredis";
 
 let scrapeQueue: Queue;
 
-export const redisConnection = new IORedis(process.env.REDIS_URL, {
+export const redisConnection = new IORedis(process.env.REDIS_URL + "?family=6", {
   maxRetriesPerRequest: null,
 });
 
